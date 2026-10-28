@@ -17,19 +17,19 @@ CTrade trade;
 //====================================================================
 // INPUTS
 //====================================================================
-input bool   InpAllowDemo                 = true;
-input bool   InpAllowLive                 = false;
-input bool   InpMassExecution             = true;
+input bool   InpAllowDemo                 = false;
+input bool   InpAllowLive                 = true;
+input bool   InpMassExecution             = false;
 
-input double InpDailyProfitTarget         = 20000.0;
-input double InpRiskPercent               = 1.50;
-input double InpDailyLossLimitPct         = 5.00;
-input double InpMaxCombinedRiskPct        = 3.00;
+input double InpDailyProfitTarget         = 30.0;
+input double InpRiskPercent               = 0.35;
+input double InpDailyLossLimitPct         = 2.00;
+input double InpMaxCombinedRiskPct        = 0.80;
 
-input int    InpMaxPositions              = 8;
-input int    InpMaxEntriesPerMinute       = 4;
-input int    InpCooldownSeconds           = 2;
-input int    InpMaxSpreadPoints           = 650;
+input int    InpMaxPositions              = 1;
+input int    InpMaxEntriesPerMinute       = 1;
+input int    InpCooldownSeconds           = 30;
+input int    InpMaxSpreadPoints           = 150;
 
 input int    InpFastEMA                   = 9;
 input int    InpSlowEMA                   = 21;
@@ -45,7 +45,7 @@ input int    InpSMIDPeriod                = 3;
 input int    InpSMISlowing                = 3;
 
 input int    InpSMCLookback               = 10;
-input bool   InpRequireSMCConfirmation    = false;
+input bool   InpRequireSMCConfirmation    = true;
 input bool   InpAllowLiquiditySweeps      = true;
 
 input bool   InpUseSMTConfirmation        = true;
@@ -58,9 +58,9 @@ input double InpBuyRSIMax                 = 72.0;
 input double InpSellRSIMin                = 28.0;
 input double InpSellRSIMax                = 50.0;
 
-input double InpStopATRMultiplier         = 2.0;
-input double InpRewardRiskRatio            = 1.2;
-input double InpBreakEvenAtR               = 1.0;
+input double InpStopATRMultiplier         = 1.5;
+input double InpRewardRiskRatio            = 1.5;
+input double InpBreakEvenAtR               = 0.8;
 
 input bool   InpUseLondonSession          = true;
 input bool   InpUseNewYorkSession         = true;
@@ -73,18 +73,18 @@ input int    InpLondonEndHour             = 17;
 input int    InpNewYorkStartHour          = 13;
 input int    InpNewYorkEndHour            = 22;
 
-input int    InpRapidMaxEntriesPerMinute  = 7;
-input int    InpRapidCooldownSeconds      = 1;
-input int    InpNormalMaxEntriesPerMinute = 5;
-input int    InpNormalCooldownSeconds     = 5;
+input int    InpRapidMaxEntriesPerMinute  = 1;
+input int    InpRapidCooldownSeconds      = 30;
+input int    InpNormalMaxEntriesPerMinute = 1;
+input int    InpNormalCooldownSeconds     = 30;
 
-input bool   InpUseManualNewsFilter       = false;
+input bool   InpUseManualNewsFilter       = true;
 input string InpNewsTimes                 = "";
-input int    InpNewsMinutesBefore         = 15;
-input int    InpNewsMinutesAfter          = 15;
+input int    InpNewsMinutesBefore         = 30;
+input int    InpNewsMinutesAfter          = 30;
 
 input ulong  InpMagicNumber               = 26101501;
-input int    InpDeviationPoints           = 30;
+input int    InpDeviationPoints           = 20;
 
 //====================================================================
 // GLOBAL STATE
