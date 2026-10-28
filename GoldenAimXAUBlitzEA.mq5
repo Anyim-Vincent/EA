@@ -21,7 +21,7 @@ input bool   InpAllowDemo                 = false;
 input bool   InpAllowLive                 = true;
 input bool   InpMassExecution             = false;
 
-input double InpDailyProfitTarget         = 30.0;
+input double InpDailyProfitTarget         = 12.0;
 input double InpRiskPercent               = 0.35;
 input double InpDailyLossLimitPct         = 2.00;
 input double InpMaxCombinedRiskPct        = 0.80;
